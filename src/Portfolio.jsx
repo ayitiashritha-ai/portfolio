@@ -413,7 +413,7 @@ print("Building real-world products with code, design, and AI.")
                     { name: "Dart Development Guide", org: "Udemy", date: "Verified", href: "https://www.udemy.com/certificate/UC-e2cd26bf-081f-4eab-9cf6-85bfe5fb957c/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" },
                     { name: "Master Gen AI and AI Tools", org: "Udemy", date: "August 2023", href: "https://drive.google.com/file/d/1s_8ADILf0_amPZGxfM1SBMJKWkqViehG/view?usp=sharing" },
                     { name: "Java Fundamentals", org: "SkillStone", date: "July 2023", href: "/java_fundamentals_cert.pdf" },
-                    { name: "Fundamentals of Network Comm", org: "Coursera", date: "October 2024" },
+                    { name: "Fundamentals of Network Comm", org: "Coursera", date: "October 2024", href: "https://drive.google.com/file/d/1B9zgCM4pWtuNAYSlysDA5B0Ae5F9fufH/view?usp=sharing" },
                   ].map((cert, j) => (
                     <a key={j} href={cert.href || "#"} target={cert.href ? "_blank" : undefined} rel="noreferrer" className={`bg-[#0b1420]/22 border border-cyan-500/10 p-6 rounded-xl flex items-center justify-between transition-colors backdrop-blur-sm ${cert.href ? 'hover:border-amber-500/50 cursor-pointer' : 'hover:border-cyan-400/20 cursor-default'}`}>
                       <div>
