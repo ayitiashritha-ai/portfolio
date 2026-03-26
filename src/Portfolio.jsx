@@ -96,11 +96,11 @@ export default function Portfolio() {
     <div className="flex bg-transparent text-gray-300 font-sans min-h-screen selection:bg-amber-500 selection:text-black">
 
       {/* --- Sidebar --- */}
-      <aside className="fixed hidden xl:flex w-[280px] h-screen bg-[#050b14]/78 backdrop-blur-md border-r border-cyan-500/10 flex-col justify-between z-50">
+      <aside className="fixed hidden xl:flex w-[280px] h-screen bg-[#050b14]/44 backdrop-blur-md border-r border-cyan-500/10 flex-col justify-between z-50">
         <div className="p-8">
           <div className="flex items-center gap-4 mb-16">
             <div className="w-10 h-10 bg-[#121212] border border-zinc-800 flex items-center justify-center rounded shadow-lg overflow-hidden">
-              <img src="/profile.jpeg" alt="Ayiti Ashritha" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
+              <img src="/profile.jpeg" alt="Ayiti Ashritha" className="w-full h-full object-cover transition-all" />
             </div>
             <div>
               <h1 className="text-white font-bold text-lg tracking-wider uppercase leading-tight">Ayiti<br />Ashritha</h1>
@@ -135,10 +135,10 @@ export default function Portfolio() {
       <main className="flex-1 xl:ml-[280px] w-full min-h-screen relative pb-24">
 
         {/* Mobile Header */}
-        <div className="xl:hidden sticky top-0 z-50 bg-[#050b14]/78 backdrop-blur-xl border-b border-cyan-500/10 p-6 flex justify-between items-center">
+        <div className="xl:hidden sticky top-0 z-50 bg-[#050b14]/38 backdrop-blur-xl border-b border-cyan-500/10 p-6 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-[#121212] border border-zinc-800 flex items-center justify-center rounded overflow-hidden">
-              <img src="/profile.jpeg" alt="Ayiti Ashritha" className="w-full h-full object-cover grayscale" />
+              <img src="/profile.jpeg" alt="Ayiti Ashritha" className="w-full h-full object-cover" />
             </div>
             <h1 className="text-white font-bold text-sm tracking-widest uppercase">Ayiti Ashritha</h1>
           </div>
@@ -148,7 +148,7 @@ export default function Portfolio() {
         </div>
 
         {/* Desktop Sticky Header */}
-        <header className="hidden xl:flex sticky top-0 z-40 bg-[#050b14]/68 backdrop-blur-md border-b border-cyan-500/10 px-12 py-6 justify-between items-center">
+        <header className="hidden xl:flex sticky top-0 z-40 bg-[#050b14]/36 backdrop-blur-md border-b border-cyan-500/10 px-12 py-6 justify-between items-center">
           <div>
             <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Personal Portfolio</p>
             <h2 className="text-white font-black text-xl uppercase tracking-widest">Ayiti Ashritha</h2>
@@ -162,7 +162,7 @@ export default function Portfolio() {
 
           {/* ================= HOME / LANDING SECTION ================= */}
           <section id="home" className="scroll-mt-32 pt-10 lg:min-h-[75vh] flex items-center relative">
-            <div className="bg-[#07111d]/58 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-16 w-full relative overflow-hidden group shadow-[0_0_40px_rgba(0,245,255,0.05)]">
+            <div className="bg-[#07111d]/28 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-16 w-full relative overflow-hidden group shadow-[0_0_40px_rgba(0,245,255,0.05)]">
               <div className="flex flex-col-reverse lg:flex-row gap-12 items-center justify-between relative z-10">
                 <div className="flex-1 relative">
                   <div className="absolute -top-16 right-4 sm:-right-8 lg:-top-16 lg:-right-4 xl:-right-12 pointer-events-none z-20">
@@ -197,9 +197,14 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="w-64 h-64 lg:w-[420px] lg:h-[480px] shrink-0 rounded-full lg:rounded-[2rem] border-2 border-zinc-800 overflow-hidden shadow-2xl relative group-hover:border-zinc-700 transition-colors">
-                  <img src="/profile.jpeg" alt="Ayiti Ashritha" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div className="shrink-0 flex flex-col items-center gap-6">
+                  <div className="w-40 h-40 lg:w-56 lg:h-56 rounded-full border-2 border-cyan-500/20 overflow-hidden shadow-2xl relative group-hover:border-cyan-400/40 transition-colors">
+                    <img src="/profile.jpeg" alt="Ayiti Ashritha" className="w-full h-full object-cover transition-all duration-700" />
+                    <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                  </div>
+                  <div className="flex items-center justify-center p-3 rounded-full bg-[#07111d]/18 border border-cyan-500/12 backdrop-blur-sm">
+                    <CodingRobot />
+                  </div>
                 </div>
               </div>
 
@@ -209,7 +214,7 @@ export default function Portfolio() {
 
           {/* ================= ABOUT SECTION ================= */}
           <section id="about" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-16 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-16 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">About Me</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-8">My Journey</h2>
               <div className="max-w-4xl space-y-6 text-zinc-400 text-sm lg:text-base leading-relaxed">
@@ -228,7 +233,7 @@ export default function Portfolio() {
 
           {/* ================= SKILLS ================= */}
           <section id="skills" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Skills & Tools</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-10">Technical Arsenal</h2>
 
@@ -239,7 +244,7 @@ export default function Portfolio() {
                   { title: "Tools & Libs", items: "TensorFlow, Scikit-learn, Pandas, NumPy, Google Colab" },
                   { title: "Soft Skills", items: "Problem-Solving, Collaboration, Adaptability, Leadership" }
                 ].map((skill, i) => (
-                  <div key={i} className="bg-[#0b1420]/56 border border-cyan-500/10 p-6 rounded-xl hover:border-cyan-400/20 transition-colors">
+                  <div key={i} className="bg-[#0b1420]/24 border border-cyan-500/10 p-6 rounded-xl hover:border-cyan-400/20 transition-colors">
                     <h4 className="text-amber-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">{skill.title}</h4>
                     <p className="text-zinc-300 text-sm font-medium leading-relaxed">{skill.items}</p>
                   </div>
@@ -250,11 +255,11 @@ export default function Portfolio() {
 
           {/* ================= EXPERIENCE ================= */}
           <section id="experience" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Work</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-10">Experience</h2>
 
-              <div className="border border-cyan-500/10 border-l-blue-500 border-l-2 p-8 bg-[#0b1420]/56 rounded-r-xl max-w-4xl relative overflow-hidden group backdrop-blur-sm">
+              <div className="border border-cyan-500/10 border-l-blue-500 border-l-2 p-8 bg-[#0b1420]/24 rounded-r-xl max-w-4xl relative overflow-hidden group backdrop-blur-sm">
                 <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-2 relative z-10">Nov 2023 - Jan 2024</p>
                 <h4 className="text-white font-bold tracking-wide text-2xl mb-1 relative z-10">AI / ML Intern</h4>
@@ -268,13 +273,13 @@ export default function Portfolio() {
 
           {/* ================= PROJECTS ================= */}
           <section id="projects" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Projects</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-10">Notable Work</h2>
 
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* Project 1 */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg backdrop-blur-sm">
                   <p className="text-amber-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">July 2023</p>
                   <h3 className="text-white text-xl font-bold uppercase tracking-wide mb-4">Diabetes Predictor System</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-6">
@@ -297,7 +302,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Project 2 */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg backdrop-blur-sm">
                   <p className="text-amber-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Banking Interface Project</p>
                   <h3 className="text-white text-xl font-bold uppercase tracking-wide mb-4">Ace BankLite</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-6">
@@ -324,13 +329,13 @@ export default function Portfolio() {
 
           {/* ================= CERTIFICATES ================= */}
           <section id="certificates" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Verified Learning</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-10">Certifications & Training</h2>
 
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* Training block */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 p-8 rounded-xl relative overflow-hidden group backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 p-8 rounded-xl relative overflow-hidden group backdrop-blur-sm">
                   <div className="absolute inset-0 bg-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <p className="text-amber-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-2 relative z-10">Summer Training</p>
                   <h3 className="text-white text-xl font-bold uppercase tracking-wide mb-2 relative z-10">Fundamentals of Java</h3>
@@ -348,7 +353,7 @@ export default function Portfolio() {
                     { name: "Java Fundamentals", org: "SkillStone", date: "July 2023", href: "/java_fundamentals_cert.pdf" },
                     { name: "Fundamentals of Network Comm", org: "Coursera", date: "October 2024" },
                   ].map((cert, j) => (
-                    <a key={j} href={cert.href || "#"} target={cert.href ? "_blank" : undefined} rel="noreferrer" className={`bg-[#0b1420]/56 border border-cyan-500/10 p-6 rounded-xl flex items-center justify-between transition-colors backdrop-blur-sm ${cert.href ? 'hover:border-amber-500/50 cursor-pointer' : 'hover:border-cyan-400/20 cursor-default'}`}>
+                    <a key={j} href={cert.href || "#"} target={cert.href ? "_blank" : undefined} rel="noreferrer" className={`bg-[#0b1420]/22 border border-cyan-500/10 p-6 rounded-xl flex items-center justify-between transition-colors backdrop-blur-sm ${cert.href ? 'hover:border-amber-500/50 cursor-pointer' : 'hover:border-cyan-400/20 cursor-default'}`}>
                       <div>
                         <p className="text-white font-bold text-sm tracking-wide">{cert.name}</p>
                         <p className="text-zinc-500 text-[10px] uppercase font-bold tracking-widest mt-1">{cert.org}</p>
@@ -368,7 +373,7 @@ export default function Portfolio() {
 
           {/* ================= ACHIEVEMENTS ================= */}
           <section id="achievements" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Highlights</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-10">Achievements</h2>
 
@@ -378,7 +383,7 @@ export default function Portfolio() {
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 0 }}
                   whileHover={{ y: -15, scale: 1.02, transition: { duration: 0.3 } }}
-                  className="bg-[#0b1420]/56 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg flex flex-col cursor-pointer backdrop-blur-sm"
+                  className="bg-[#0b1420]/22 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg flex flex-col cursor-pointer backdrop-blur-sm"
                 >
                   <div className="w-full h-40 rounded-xl overflow-hidden mb-6 border border-zinc-800 relative group/img">
                     <img src="/medal_achievement.png" alt="Sports Medal" className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700" />
@@ -397,7 +402,7 @@ export default function Portfolio() {
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
                   whileHover={{ y: -15, scale: 1.02, transition: { duration: 0.3 } }}
-                  className="bg-[#0b1420]/56 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg flex flex-col cursor-pointer backdrop-blur-sm"
+                  className="bg-[#0b1420]/22 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg flex flex-col cursor-pointer backdrop-blur-sm"
                 >
                   <div className="w-full h-40 rounded-xl overflow-hidden mb-6 border border-zinc-800 relative group/img bg-[#0a0a0a]">
                     <img src="/arduino_achievement.png" alt="Arduino Project" className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700" />
@@ -416,7 +421,7 @@ export default function Portfolio() {
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 3.8, ease: "easeInOut", delay: 1 }}
                   whileHover={{ y: -15, scale: 1.02, transition: { duration: 0.3 } }}
-                  className="bg-[#0b1420]/56 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg flex flex-col cursor-pointer backdrop-blur-sm"
+                  className="bg-[#0b1420]/22 border border-cyan-500/10 p-8 rounded-xl hover:border-cyan-400/20 transition-colors shadow-lg flex flex-col cursor-pointer backdrop-blur-sm"
                 >
                   <span className="text-3xl mb-4 block">💻</span>
                   <h4 className="text-white font-bold tracking-wide mb-2">Hackathons</h4>
@@ -431,26 +436,26 @@ export default function Portfolio() {
 
           {/* ================= EDUCATION ================= */}
           <section id="education" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Academics</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-8">Education</h2>
 
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="border border-cyan-500/10 border-t-amber-500 border-t-2 p-8 bg-[#0b1420]/56 rounded-b-xl shadow-lg hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="border border-cyan-500/10 border-t-amber-500 border-t-2 p-8 bg-[#0b1420]/22 rounded-b-xl shadow-lg hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">Since Aug 2023</p>
                   <h4 className="text-white font-bold text-lg mb-3 leading-tight">Lovely Professional University</h4>
                   <p className="text-zinc-400 text-sm mb-6">B.Tech - Computer Science and Engineering</p>
                   <p className="text-amber-500 font-bold bg-amber-500/10 px-3 py-1.5 rounded inline-block text-[10px] uppercase tracking-widest">CGPA: 7.0</p>
                 </div>
 
-                <div className="border border-cyan-500/10 p-8 bg-[#0b1420]/56 rounded-xl shadow-lg hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="border border-cyan-500/10 p-8 bg-[#0b1420]/22 rounded-xl shadow-lg hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">Apr 2021 - Mar 2023</p>
                   <h4 className="text-white font-bold text-lg mb-3 leading-tight">Narayana Schools</h4>
                   <p className="text-zinc-400 text-sm mb-6">Intermediate</p>
                   <p className="text-zinc-300 font-bold bg-zinc-800 px-3 py-1.5 rounded inline-block text-[10px] uppercase tracking-widest">94.2%</p>
                 </div>
 
-                <div className="border border-cyan-500/10 p-8 bg-[#0b1420]/56 rounded-xl shadow-lg hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="border border-cyan-500/10 p-8 bg-[#0b1420]/22 rounded-xl shadow-lg hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">Apr 2020 - Mar 2021</p>
                   <h4 className="text-white font-bold text-lg mb-3 leading-tight">Vasavi High School</h4>
                   <p className="text-zinc-400 text-sm mb-6">Matriculation</p>
@@ -462,7 +467,7 @@ export default function Portfolio() {
 
           {/* ================= RESUME ================= */}
           <section id="resume" className="scroll-mt-32">
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 p-8 lg:p-12 rounded-2xl flex flex-col lg:flex-row gap-12 justify-between items-center relative overflow-hidden shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 p-8 lg:p-12 rounded-2xl flex flex-col lg:flex-row gap-12 justify-between items-center relative overflow-hidden shadow-[0_0_28px_rgba(0,245,255,0.04)]">
 
               <div className="flex-1 w-full z-10">
                 <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Resume</p>
@@ -473,7 +478,7 @@ export default function Portfolio() {
               </div>
 
               {/* Private Unlock wrapper logic applied back cleanly */}
-              <div className="w-full lg:w-[420px] bg-[#0b1420]/56 border border-cyan-500/10 rounded-2xl p-6 lg:p-8 shrink-0 shadow-2xl z-10 backdrop-blur-sm">
+              <div className="w-full lg:w-[420px] bg-[#0b1420]/22 border border-cyan-500/10 rounded-2xl p-6 lg:p-8 shrink-0 shadow-2xl z-10 backdrop-blur-sm">
 
                 {!isResumeUnlocked ? (
                   <div className="text-center py-4">
@@ -536,13 +541,13 @@ export default function Portfolio() {
           <section id="contact" className="grid grid-cols-1 lg:grid-cols-2 gap-6 scroll-mt-32">
 
             {/* Left: Contact Let's Connect */}
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Contact</p>
               <h2 className="text-white text-3xl lg:text-4xl font-black uppercase tracking-tight mb-8">Let's Connect</h2>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 {/* Email */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <div className="w-10 h-10 border border-zinc-700 flex items-center justify-center rounded-lg mb-5 text-amber-500">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
                   </div>
@@ -550,7 +555,7 @@ export default function Portfolio() {
                   <a href="mailto:ayitiashritha@gmail.com" className="text-white font-bold text-[10px] truncate block hover:text-amber-500 transition-colors">ayitiashritha@gmail.com</a>
                 </div>
                 {/* Location */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <div className="w-10 h-10 border border-zinc-700 flex items-center justify-center rounded-lg mb-5 text-amber-500">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
                   </div>
@@ -558,7 +563,7 @@ export default function Portfolio() {
                   <p className="text-white font-bold text-xs truncate">India</p>
                 </div>
                 {/* Github */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <div className="w-10 h-10 border border-zinc-700 flex items-center justify-center rounded-lg mb-5 text-amber-500">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.5 5.5 0 0 0-1.5-3.8 5.5 5.5 0 0 0 .1-3.7s-1.2-.5-3.9 1.5a13.4 13.4 0 0 0-7 0C6.2 3.3 5 3.8 5 3.8a5.5 5.5 0 0 0 .1 3.7A5.5 5.5 0 0 0 3.6 11c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4" /><path d="M3.9 19c4.2-1.2 4.2-2.5 4.2-2.5" /></svg>
                   </div>
@@ -566,7 +571,7 @@ export default function Portfolio() {
                   <a href="https://github.com/ashrithaayiti18" target="_blank" rel="noreferrer" className="text-white font-bold text-[11px] truncate block hover:text-amber-500 transition-colors">github.com/ashrithaayiti18</a>
                 </div>
                 {/* Linkedin */}
-                <div className="bg-[#0b1420]/56 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
+                <div className="bg-[#0b1420]/22 border border-cyan-500/10 rounded-xl p-5 hover:border-cyan-400/20 transition-colors backdrop-blur-sm">
                   <div className="w-10 h-10 border border-zinc-700 flex items-center justify-center rounded-lg mb-5 text-amber-500">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
                   </div>
@@ -577,7 +582,7 @@ export default function Portfolio() {
             </div>
 
             {/* Right: Availability */}
-            <div className="bg-[#07111d]/54 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 flex flex-col justify-between shadow-[0_0_28px_rgba(0,245,255,0.04)]">
+            <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-12 flex flex-col justify-between shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <div>
                 <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Availability</p>
                 <h2 className="text-white text-3xl lg:text-4xl font-black uppercase tracking-tight mb-8">Open for Opportunities</h2>
