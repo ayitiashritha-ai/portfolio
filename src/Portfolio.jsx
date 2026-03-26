@@ -58,6 +58,19 @@ const CodingRobot = () => (
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
   const [isResumeUnlocked, setIsResumeUnlocked] = useState(false);
+  const aboutCode = `profile = {
+    "name": "Ayiti Ashritha",
+    "role": "Frontend Developer & AI/ML Engineer",
+    "location": "India",
+    "education": "B.Tech CSE (AI & ML)",
+    "focus": ["React", "Machine Learning", "Intelligent Systems"],
+    "open_to": ["Internships", "Junior Roles", "Collaborations"],
+    "leadership": "Captain, Women's Kabaddi Team"
+}
+
+print("Building real-world products with code, design, and AI.")
+`;
+  const [typedAboutCode, setTypedAboutCode] = useState("");
 
   const navItems = [
     { name: "HOME", id: "home" },
@@ -91,6 +104,26 @@ export default function Portfolio() {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    let timeoutId;
+
+    const typeNext = () => {
+      currentIndex += 1;
+      setTypedAboutCode(aboutCode.slice(0, currentIndex));
+
+      if (currentIndex < aboutCode.length) {
+        const nextChar = aboutCode[currentIndex];
+        const delay = nextChar === "\n" ? 70 : 22;
+        timeoutId = window.setTimeout(typeNext, delay);
+      }
+    };
+
+    timeoutId = window.setTimeout(typeNext, 250);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [aboutCode]);
 
   return (
     <div className="flex bg-transparent text-gray-300 font-sans min-h-screen selection:bg-amber-500 selection:text-black">
@@ -217,16 +250,25 @@ export default function Portfolio() {
             <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-16 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">About Me</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-8">My Journey</h2>
-              <div className="max-w-4xl space-y-6 text-zinc-400 text-sm lg:text-base leading-relaxed">
-                <p>
-                  I am a Computer Science student currently looking for internships, junior developer roles, and collaborative opportunities where I can keep learning while contributing to real, intelligent products.
-                </p>
-                <p>
-                  My focus lies heavily in building real-world projects like ML-based prediction systems and intelligent models, combining strong problem-solving with practical implementation. Weaving deep learning data into comprehensive backend systems creates the robust solutions I am passionate about.
-                </p>
-                <p>
-                  Outside of coding, I hold a strong interest in electronics and hardware prototyping (like my Arduino projects) and value teamwork and leadership, currently serving as the Captain of my department's Women's Kabaddi team.
-                </p>
+              <div className="max-w-4xl rounded-2xl border border-cyan-500/14 bg-[#08111b]/48 overflow-hidden shadow-[0_0_30px_rgba(0,245,255,0.05)]">
+                <div className="flex items-center justify-between px-5 py-3 border-b border-cyan-500/10 bg-[#050c14]/55">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-rose-400/80"></span>
+                    <span className="w-3 h-3 rounded-full bg-amber-400/80"></span>
+                    <span className="w-3 h-3 rounded-full bg-emerald-400/80"></span>
+                  </div>
+                  <p className="text-cyan-200/70 text-[10px] font-bold tracking-[0.25em] uppercase">about_me.py</p>
+                </div>
+                <pre className="overflow-x-auto p-5 lg:p-6 text-[13px] lg:text-sm leading-7 text-cyan-100 whitespace-pre-wrap font-mono">
+                  <span className="text-cyan-300">{typedAboutCode}</span>
+                  <motion.span
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ repeat: Infinity, duration: 0.9 }}
+                    className="inline-block w-3 text-amber-400"
+                  >
+                    |
+                  </motion.span>
+                </pre>
               </div>
             </div>
           </section>
@@ -267,6 +309,15 @@ export default function Portfolio() {
                 <p className="text-zinc-400 leading-relaxed text-sm md:text-base relative z-10">
                   Worked on foundational AI and ML tasks including meticulous data preprocessing and model experimentation. Gained pivotal hands-on experience structuring Python ML workflows and orchestrating essential AI tools into coherent analytical solutions. Successfully earned verified certification for the tenure.
                 </p>
+                <a
+                  href="https://drive.google.com/file/d/1_Ws4bp-ExZLH26PQTfj8PZ2gN_RLPoF4/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 border border-amber-500/40 text-amber-500 hover:bg-amber-500/10 hover:border-amber-500 px-4 py-2 rounded-lg text-[10px] font-bold tracking-[0.2em] uppercase transition-colors mt-6 relative z-10"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6" /><path d="M9 15h6" /><path d="M9 11h3" /></svg>
+                  View Certificate
+                </a>
               </div>
             </div>
           </section>
