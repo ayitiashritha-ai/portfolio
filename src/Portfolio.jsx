@@ -58,6 +58,12 @@ const CodingRobot = () => (
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
   const [isResumeUnlocked, setIsResumeUnlocked] = useState(false);
+  const skillCards = [
+    { title: "Languages", label: "Core", items: ["Java", "Python", "JavaScript", "HTML", "CSS"] },
+    { title: "AI & ML", label: "Focus", items: ["Machine Learning", "Deep Learning", "Computer Vision", "NLP", "Generative AI"] },
+    { title: "Tools & Libs", label: "Stack", items: ["React", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Google Colab"] },
+    { title: "Soft Skills", label: "Strengths", items: ["Problem-Solving", "Collaboration", "Adaptability", "Leadership"] },
+  ];
   const aboutCode = `profile = {
     "name": "Ayiti Ashritha",
     "role": "Frontend Developer & AI/ML Engineer",
@@ -250,25 +256,44 @@ print("Building real-world products with code, design, and AI.")
             <div className="bg-[#07111d]/24 backdrop-blur-sm border border-cyan-500/12 rounded-2xl p-8 lg:p-16 shadow-[0_0_28px_rgba(0,245,255,0.04)]">
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">About Me</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-8">My Journey</h2>
-              <div className="max-w-4xl rounded-2xl border border-cyan-500/14 bg-[#08111b]/48 overflow-hidden shadow-[0_0_30px_rgba(0,245,255,0.05)]">
-                <div className="flex items-center justify-between px-5 py-3 border-b border-cyan-500/10 bg-[#050c14]/55">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-400/80"></span>
-                    <span className="w-3 h-3 rounded-full bg-amber-400/80"></span>
-                    <span className="w-3 h-3 rounded-full bg-emerald-400/80"></span>
+              <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
+                <div className="space-y-5">
+                  <p className="text-zinc-300 text-base leading-relaxed">
+                    I am a Computer Science student focused on AI, Machine Learning, and frontend development, with a strong interest in building products that feel intelligent, practical, and easy to use.
+                  </p>
+                  <p className="text-zinc-400 text-sm lg:text-base leading-relaxed">
+                    My work often blends user experience with technical problem-solving. I enjoy creating ML-based systems, clean frontend interfaces, and project workflows that turn ideas into useful real-world applications.
+                  </p>
+                  <p className="text-zinc-400 text-sm lg:text-base leading-relaxed">
+                    I am currently looking for internships, junior roles, and collaborative opportunities where I can keep learning, contribute with consistency, and grow by building meaningful products with strong teams.
+                  </p>
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    <span className="border border-cyan-400/20 bg-cyan-400/8 text-cyan-200 text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full">React</span>
+                    <span className="border border-cyan-400/20 bg-cyan-400/8 text-cyan-200 text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full">Machine Learning</span>
+                    <span className="border border-cyan-400/20 bg-cyan-400/8 text-cyan-200 text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full">Intelligent Systems</span>
                   </div>
-                  <p className="text-cyan-200/70 text-[10px] font-bold tracking-[0.25em] uppercase">about_me.py</p>
                 </div>
-                <pre className="overflow-x-auto p-5 lg:p-6 text-[13px] lg:text-sm leading-7 text-cyan-100 whitespace-pre-wrap font-mono">
-                  <span className="text-cyan-300">{typedAboutCode}</span>
-                  <motion.span
-                    animate={{ opacity: [1, 0, 1] }}
-                    transition={{ repeat: Infinity, duration: 0.9 }}
-                    className="inline-block w-3 text-amber-400"
-                  >
-                    |
-                  </motion.span>
-                </pre>
+
+                <div className="w-full max-w-md lg:ml-auto rounded-2xl border border-cyan-500/14 bg-[#08111b]/48 overflow-hidden shadow-[0_0_30px_rgba(0,245,255,0.05)]">
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-cyan-500/10 bg-[#050c14]/55">
+                    <div className="flex items-center gap-2">
+                      <span className="w-3 h-3 rounded-full bg-rose-400/80"></span>
+                      <span className="w-3 h-3 rounded-full bg-amber-400/80"></span>
+                      <span className="w-3 h-3 rounded-full bg-emerald-400/80"></span>
+                    </div>
+                    <p className="text-cyan-200/70 text-[10px] font-bold tracking-[0.25em] uppercase">about_me.py</p>
+                  </div>
+                  <pre className="overflow-x-auto p-4 lg:p-5 text-[12px] leading-6 text-cyan-100 whitespace-pre-wrap font-mono min-h-[250px]">
+                    <span className="text-cyan-300">{typedAboutCode}</span>
+                    <motion.span
+                      animate={{ opacity: [1, 0, 1] }}
+                      transition={{ repeat: Infinity, duration: 0.9 }}
+                      className="inline-block w-3 text-amber-400"
+                    >
+                      |
+                    </motion.span>
+                  </pre>
+                </div>
               </div>
             </div>
           </section>
@@ -279,18 +304,44 @@ print("Building real-world products with code, design, and AI.")
               <p className="text-zinc-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Skills & Tools</p>
               <h2 className="text-white text-3xl font-black uppercase tracking-tight mb-10">Technical Arsenal</h2>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {[
-                  { title: "Languages", items: "Java, Python (Libraries), JavaScript, HTML, CSS" },
-                  { title: "AI & ML", items: "Machine Learning, Deep Learning, Computer Vision, NLP, Generative AI" },
-                  { title: "Tools & Libs", items: "TensorFlow, Scikit-learn, Pandas, NumPy, Google Colab" },
-                  { title: "Soft Skills", items: "Problem-Solving, Collaboration, Adaptability, Leadership" }
-                ].map((skill, i) => (
-                  <div key={i} className="bg-[#0b1420]/24 border border-cyan-500/10 p-6 rounded-xl hover:border-cyan-400/20 transition-colors">
-                    <h4 className="text-amber-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">{skill.title}</h4>
-                    <p className="text-zinc-300 text-sm font-medium leading-relaxed">{skill.items}</p>
+              <div className="grid lg:grid-cols-[1fr_1.05fr] gap-6">
+                <div className="bg-[#0a121b]/28 border border-cyan-500/10 rounded-2xl p-6 lg:p-7 shadow-[0_0_18px_rgba(0,245,255,0.03)] min-h-[320px]">
+                  <p className="text-amber-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">Technical Snapshot</p>
+                  <h3 className="text-white text-2xl font-bold tracking-wide mb-4">Skills That Power My Projects</h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-8 max-w-md">
+                    I enjoy combining frontend development with AI and machine learning to build projects that are practical, clean, and thoughtful in execution.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {["Java", "Python", "JavaScript", "React", "TensorFlow", "Machine Learning", "Computer Vision", "Problem-Solving"].map((item) => (
+                      <span key={item} className="border border-cyan-500/12 bg-cyan-500/6 text-zinc-200 text-[10px] font-bold tracking-[0.18em] uppercase px-4 py-2 rounded-full">
+                        {item}
+                      </span>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  {skillCards.map((skill) => (
+                    <div key={skill.title} className="bg-[#0a121b]/28 border border-cyan-500/10 rounded-xl px-5 py-4 shadow-[0_0_16px_rgba(0,245,255,0.025)]">
+                      <div className="flex items-center justify-between gap-4 mb-3">
+                        <div>
+                          <p className="text-white text-sm font-bold tracking-wide">{skill.title}</p>
+                          <p className="text-zinc-500 text-[10px] uppercase font-bold tracking-[0.18em] mt-1">{skill.label}</p>
+                        </div>
+                        <div className="text-amber-500/80 text-[10px] font-bold tracking-[0.18em] uppercase bg-amber-500/10 px-3 py-1 rounded shrink-0">
+                          {skill.items.length} Skills
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {skill.items.map((item) => (
+                          <span key={item} className="text-[10px] font-bold tracking-[0.14em] uppercase text-zinc-300 border border-zinc-700/70 bg-[#08111b]/70 px-3 py-1.5 rounded-md">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
