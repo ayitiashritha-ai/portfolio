@@ -1,8 +1,14 @@
-import Portfolio from './Portfolio'
+import CircuitBackground from "./CircuitBackground";
+import Portfolio from "./Portfolio";
 
 function App() {
   return (
-    <Portfolio />
+    <>
+      <CircuitBackground />
+      <div className="relative z-10">
+        <Portfolio />
+      </div>
+    </>
   )
 }
 
