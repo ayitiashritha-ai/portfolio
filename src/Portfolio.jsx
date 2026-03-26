@@ -310,7 +310,7 @@ print("Building real-world products with code, design, and AI.")
                   Worked on foundational AI and ML tasks including meticulous data preprocessing and model experimentation. Gained pivotal hands-on experience structuring Python ML workflows and orchestrating essential AI tools into coherent analytical solutions. Successfully earned verified certification for the tenure.
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1_Ws4bp-ExZLH26PQTfj8PZ2gN_RLPoF4/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1hEbTEFXeIugRgOpvw8Ly-U4tAgFRyS22/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 border border-amber-500/40 text-amber-500 hover:bg-amber-500/10 hover:border-amber-500 px-4 py-2 rounded-lg text-[10px] font-bold tracking-[0.2em] uppercase transition-colors mt-6 relative z-10"
@@ -411,7 +411,7 @@ print("Building real-world products with code, design, and AI.")
                 <div className="flex flex-col gap-4">
                   {[
                     { name: "Dart Development Guide", org: "Udemy", date: "Verified", href: "https://www.udemy.com/certificate/UC-e2cd26bf-081f-4eab-9cf6-85bfe5fb957c/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" },
-                    { name: "Master Gen AI and AI Tools", org: "Udemy", date: "August 2023" },
+                    { name: "Master Gen AI and AI Tools", org: "Udemy", date: "August 2023", href: "https://drive.google.com/file/d/1_Ws4bp-ExZLH26PQTfj8PZ2gN_RLPoF4/view?usp=sharing" },
                     { name: "Java Fundamentals", org: "SkillStone", date: "July 2023", href: "/java_fundamentals_cert.pdf" },
                     { name: "Fundamentals of Network Comm", org: "Coursera", date: "October 2024" },
                   ].map((cert, j) => (
