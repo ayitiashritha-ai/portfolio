@@ -285,15 +285,26 @@ export default function Portfolio() {
                   <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                     Architected a fully functional predictor system integrating data preprocessing, feature engineering, and model evaluation. Operationalized Logistic Regression and Decision Tree models with Pickle, delivering low-latency predictions via an optimized Flask backend connected to an intuitive web interface.
                   </p>
-                  <a
-                    href="https://github.com/ayitiashritha-ai/Diabetes-prediction-system.git"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 border border-amber-500/40 text-amber-500 hover:bg-amber-500/10 hover:border-amber-500 px-4 py-2 rounded-lg text-[10px] font-bold tracking-[0.2em] uppercase transition-colors mb-6"
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.5 5.5 0 0 0-1.5-3.8 5.5 5.5 0 0 0 .1-3.7s-1.2-.5-3.9 1.5a13.4 13.4 0 0 0-7 0C6.2 3.3 5 3.8 5 3.8a5.5 5.5 0 0 0 .1 3.7A5.5 5.5 0 0 0 3.6 11c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4" /><path d="M3.9 19c4.2-1.2 4.2-2.5 4.2-2.5" /></svg>
-                    View on GitHub
-                  </a>
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <a
+                      href="https://github.com/ayitiashritha-ai/Diabetes-prediction-system.git"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 border border-amber-500/40 text-amber-500 hover:bg-amber-500/10 hover:border-amber-500 px-4 py-2 rounded-lg text-[10px] font-bold tracking-[0.2em] uppercase transition-colors"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.5 5.5 0 0 0-1.5-3.8 5.5 5.5 0 0 0 .1-3.7s-1.2-.5-3.9 1.5a13.4 13.4 0 0 0-7 0C6.2 3.3 5 3.8 5 3.8a5.5 5.5 0 0 0 .1 3.7A5.5 5.5 0 0 0 3.6 11c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4" /><path d="M3.9 19c4.2-1.2 4.2-2.5 4.2-2.5" /></svg>
+                      View on GitHub
+                    </a>
+                    <a
+                      href="https://diabetespredictor-cbbtuxlthukqy2kyn4sedc.streamlit.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 border border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 hover:border-cyan-300 px-4 py-2 rounded-lg text-[10px] font-bold tracking-[0.2em] uppercase transition-colors"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+                      Live Demo
+                    </a>
+                  </div>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {['Python', 'Flask', 'Scikit-learn', 'Frontend'].map((tag, i) => (
                       <span key={i} className="text-[9px] font-bold tracking-widest uppercase bg-zinc-800/50 text-zinc-300 px-3 py-1.5 rounded">{tag}</span>
